@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat App</title>
+
+        <meta charset="utf=8">
+        <meta name="viewport" content="width=device-width, inital-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body class="chat">
+        <div class="chat__sidebar">       
+            <h3>
+                Chat app
+            </h3>
+            <div class="chat__sidebar__content">
+                    Welcome to chat app
+            </div>
+            <div id="users">
+
+            </div>
+        </div>
+        <div class="chat__main">
+
+            <ol id="messages" class="chat__messages">
+            </ol>
+
+            <div class="chat__footer">
+                <form id="message-form">
+                    <input type="text" name="message" placeholder="Message" autofocus autocomplete="off" />             
+                    <button>Send</button>
+                </form>
+                
+                <button id="location-button">Send Location</button>
+            </div>
+        </div>
+
+        <script id="message-template" type="text/template">
+            <li class="message">
+                <div class="message__title">
+                    <h4>
+                        {{from}}
+                    </h4>
+                    <span>{{time}}  </span>
+                </div>
+                <div class="message__body">
+                    <p>
+                        {{text}}
+                    </p>
+                </div>
+            </li>
+        </script>
+
+        <script id="location-template" type="text/template">
+            <li class="message">
+                <div class="message__title">
+                    <h4>
+                        Location Request
+                    </h4>
+                    <span>{{time}}  </span>
+                </div>
+                <div class="message__body">
+                    <p>
+                        {{from}} <a href="{{url}}}"target="_blank">Location is here</a>
+                    </p>
+                </div>
+            </li>
+        </script>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/libs/jquery-3.3.1.min.js"></script>
+        <script src="/libs/moment.js"></script>
+        <script src="/libs/mustache.js"></script>
+        <script src="/js/deparam.js"></script>
+        <script src="/js/chat.js"></script>
+    </body>
+</html>

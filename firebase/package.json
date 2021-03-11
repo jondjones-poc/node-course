@@ -1,0 +1,21 @@
+{
+  "name": "toned",
+  "version": "1.0.0",
+  "description": "TON Error Dispatcher",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "firebase": "^5.2.0",
+    "lodash": "^4.17.10",
+    "nodemon": "^1.17.5",
+    "uuid": "^3.3.2"
+  }
+}

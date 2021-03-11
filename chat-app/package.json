@@ -1,0 +1,26 @@
+{
+  "name": "node-chat-app",
+  "version": "1.0.0",
+  "description": "Socket IO Chat Application",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "mocha server/**/*.test.js"
+  },
+  "keywords": [
+    "node",
+    "sockets"
+  ],
+  "author": "J Jones",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "socketio": "^1.0.0"
+  },
+  "devDependencies": {
+    "expect": "^23.1.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5"
+  }
+}
